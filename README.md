@@ -3,7 +3,7 @@ Docker for IVH-ICH-PHE Segmentation
 
 [![Build Status](https://github.com/llgneuroresearch/IIPS-Docker/actions/workflows/docker.yml/badge.svg)](https://hub.docker.com/r/avnirlab/iips/tags)
 ![GitHub Release](https://img.shields.io/github/v/release/llgneuroresearch/IIPS-Docker)
-[![Documentation](https://img.shields.io/badge/Documentation-blue)](https://avnir-models-documentation.readthedocs.io/models/brain_extraction.html)
+[![Documentation](https://img.shields.io/badge/Documentation-blue)](https://avnir-models-documentation.readthedocs.io/models/iips.html)
 
 Docker container for IVH-ICH-PHE Segmentation based on nnU-Net, a self-configuring method for medical image segmentation.
 
