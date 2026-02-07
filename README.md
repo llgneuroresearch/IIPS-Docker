@@ -31,8 +31,8 @@ To pull the Docker image, run the following command:
 docker pull avnirlab/iips:<tag>
 ```
 
-1. Every time main branch is updated, the CICD build the Dockerfile and push the image to Dockerhub with latest tag (avnirlab/iips:latest).
-2. Every time a new tag is created, the CICD build the Dockerfile and push the image to Dockerhub with tag name (e.g. avnirlab/iips:1.0.0).
+1. Every time main branch is updated, the CICD build the Dockerfile and push the image to Dockerhub with latest tag, i.e. `avnirlab/iips:latest)`
+2. Every time a new tag is created, the CICD build the Dockerfile and push the image to Dockerhub with tag name e.g.: `avnirlab/iips:1.0.0`.
 
 ### Run inference
 
