@@ -20,7 +20,7 @@ The Dockerfile sets up an environment for running NNUNETV2 with PyTorch and CUDA
 To build the Docker image, run the following command in the directory containing the Dockerfile:
 
 ```
-docker build -t iips:latest .
+docker build -t iips:latest
 ```
 
 ### Pulling the Docker Image from DockerHub
