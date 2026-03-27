@@ -10,4 +10,4 @@ for file in /input/*; do
     fi
 done
 
-nnUNetv2_predict -i /input -o /output/results -d 033 -c 2d -f all $@
+nnUNetv2_predict -i /input -o /output/results -d 003 -c 3d_fullres $@
