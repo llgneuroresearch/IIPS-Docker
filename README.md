@@ -46,6 +46,15 @@ After building or pulling the Docker image, you can run inference on your nifti 
 
 The input consists into a directory containing all your CT scans in Nifti format. Nifti files does not required a specific filename.
 
+```
+/project_root
+├── input_data/               <-- Your source directory
+│   ├── scan_001.nii.gz       (Filenames can be anything)
+│   ├── patient_abc.nii       (Uncompressed Nifti works too)
+│   ├── trauma_case_v2.nii.gz
+│   └── 001_stroke_case.nii
+```
+
 - Output
 
 Create an output folder where the brain masks will be saved.
