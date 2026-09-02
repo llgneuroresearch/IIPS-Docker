@@ -13,6 +13,7 @@ The Dockerfile sets up an environment for running NNUNETV2 with PyTorch and CUDA
 
 > [!NOTE]  
 > Before using the following command lines. Docker and nvidia-container-toolkit must be installed. (`sudo apt install -y docker.io nvidia-container-toolkit` or `sudo apt install -y docker.io nvidia-docker2`)
+> A CUDA-enabled NVIDIA GPU is **strongly recommended**. Also see the [nnU-Net hardware requirements](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md?utm_source=chatgpt.com#hardware-requirements-for-inference). CPU inference is not tested and may not work properly. 
 
 
 ### Building the Docker Image Manually
