@@ -13,7 +13,13 @@ The Dockerfile sets up an environment for running NNUNETV2 with PyTorch and CUDA
 
 > [!NOTE]  
 > Before using the following command lines. Docker and nvidia-container-toolkit must be installed. (`sudo apt install -y docker.io nvidia-container-toolkit` or `sudo apt install -y docker.io nvidia-docker2`)
-> **A CUDA-enabled NVIDIA GPU is strongly recommended**. Also see the [nnU-Net hardware requirements](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md?utm_source=chatgpt.com#hardware-requirements-for-inference). CPU inference is not tested and may not work properly. 
+> **A CUDA-enabled NVIDIA GPU is strongly recommended**. Also see the [nnU-Net hardware requirements](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md?utm_source=chatgpt.com#hardware-requirements-for-inference). CPU inference is not tested and may not work properly.
+> If using on a Mac with Apple silicon (arm64), the code must be adapted to be used with Rosetta emulation. Make sure that "Use Rosetta for x86/amd64 emulation on Apple Silicon" is enabled in Docker Desktop settings (Settings → General). 
+> ```
+> docker pull --platform linux/amd64 avnirlab/iips
+> docker run --platform linux/amd64 ... avnirlab/iips
+> ```
+
 
 
 ### Building the Docker Image Manually
@@ -68,4 +74,4 @@ To run the inference, run the following command:
 docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --gpus all --rm --shm-size 2g avnirlab/iips:latest -device cuda
 ```
 
-PATH_TO_INPUT and PATH_TO_OUTPUT must be absolute paths. If you want to run the inference on CPU, change `cuda` to `cpu` and remove `--gpus all` in the previous command line.
+PATH_TO_INPUT and PATH_TO_OUTPUT must be absolute paths. If you want to run the inference on CPU, change `cuda` to `cpu` and remove `--gpus all` in the previous command line. See this [issue](https://github.com/llgneuroresearch/IIPS-Docker/issues/2#issuecomment-5499476356) regarding CPU inference. 
