@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the following paper."
+title: "IIPS-Docker: Multiclass Segmentation of Intracerebral Hemorrhage, Intraventricular Hemorrhage, and Perihematomal Edema"
+type: software
+url: "https://github.com/llgneuroresearch/IIPS-Docker"
+preferred-citation:
+  type: article
+  title: "Multiclass Segmentation of Intracerebral Hemorrhage, Intraventricular Hemorrhage, and Perihematomal Edema: Public CT Dataset and Benchmark"
+  authors:
+    - family-names: "Wu"
+      given-names: "An Ni"
+    - family-names: "Portafaix"
+      given-names: "Aloys"
+    - family-names: "Pilon"
+      given-names: "Delphine"
+    - family-names: "Cusson"
+      given-names: "Tasha"
+    - family-names: "Panetta"
+      given-names: "Luca"
+    - family-names: "Noël"
+      given-names: "Marie-Jeanne"
+    - family-names: "Nehme"
+      given-names: "Ahmad"
+    - family-names: "Padilha"
+      given-names: "Igor Gomes"
+    - family-names: "Dumouchel"
+      given-names: "Charles"
+    - family-names: "Theaud"
+      given-names: "Guillaume"
+    - family-names: "Bensemain"
+      given-names: "Mehdi"
+    - family-names: "Gioia"
+      given-names: "Laura C"
+    - family-names: "Kadoury"
+      given-names: "Samuel"
+    - family-names: "Letourneau-Guillon"
+      given-names: "Laurent"
+  journal: "Radiology Advances"
+  publisher:
+    name: "Oxford University Press"
+  issn: "2976-9337"
+  year: 2026
+  month: 8
+  date-published: "2026-08-25"
+  date-released: "2026-08-25"
+  identifiers:
+    - type: doi
+      value: "10.1093/radadv/umag036"
+  url: "https://doi.org/10.1093/radadv/umag036"
+  abbreviation: "umag036"
+  license: "CC-BY-4.0"

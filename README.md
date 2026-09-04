@@ -20,14 +20,12 @@ The Dockerfile sets up an environment for running NNUNETV2 with PyTorch and CUDA
 > docker run --platform linux/amd64 ... avnirlab/iips
 > ```
 
-
-
 ### Building the Docker Image Manually
 
 To build the Docker image, run the following command in the directory containing the Dockerfile:
 
 ```
-docker build -t iips:latest
+docker build -t iips:latest .
 ```
 
 ### Pulling the Docker Image from DockerHub
@@ -38,9 +36,9 @@ To pull the Docker image, run the following command:
 docker pull avnirlab/iips:<tag>
 ```
 
-1. Every time main branch is updated, the CICD build the Dockerfile and push the image to Dockerhub with latest tag, i.e. `avnirlab/iips:latest`
+1. Every time main branch is updated, the CICD builds the Dockerfile and pushes the image to Dockerhub with latest tag, i.e. `avnirlab/iips:latest`
 
-2. Every time a new tag is created, the CICD build the Dockerfile and push the image to Dockerhub with tag name e.g.: `avnirlab/iips:1.0.0`.
+2. Every time a new tag is created, the CICD builds the Dockerfile and pushes the image to Dockerhub with tag name e.g.: `avnirlab/iips:1.0.0`.
 
 ### Run inference
 
@@ -51,7 +49,7 @@ After building or pulling the Docker image, you can run inference on your nifti 
 
 - Input
 
-The input consists into a directory containing all your CT scans in Nifti format. Nifti files does not required a specific filename.
+The input consists into a directory containing all your CT scans in Nifti format. Nifti files do not require a specific filename.
 
 ```
 /project_root
@@ -64,14 +62,34 @@ The input consists into a directory containing all your CT scans in Nifti format
 
 - Output
 
-Create an output folder where the brain masks will be saved.
+Create an output folder where the ICH, IVH, and PHE segmentation masks will be saved.
 
 - Command line
 
-To run the inference, run the following command:
+To run the inference on GPU, run the following command:
 
 ```
 docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --gpus all --rm --shm-size 2g avnirlab/iips:latest -device cuda
 ```
 
-PATH_TO_INPUT and PATH_TO_OUTPUT must be absolute paths. If you want to run the inference on CPU, change `cuda` to `cpu` and remove `--gpus all` in the previous command line. See this [issue](https://github.com/llgneuroresearch/IIPS-Docker/issues/2#issuecomment-5499476356) regarding CPU inference. 
+To run the inference on CPU, run the following command:
+
+```
+docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu
+```
+
+If you run the inference on CPU, we highly recommend to use `--disable_tta` option to speed up the inference time:
+
+```
+docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu --disable_tta
+```
+
+PATH_TO_INPUT and PATH_TO_OUTPUT must be absolute paths. See this [issue](https://github.com/llgneuroresearch/IIPS-Docker/issues/2#issuecomment-5499476356) regarding CPU inference.
+
+## Citation
+
+If you use this tool, please cite:
+
+> Wu AN, Portafaix A, Pilon D, et al. Multiclass Segmentation of Intracerebral Hemorrhage, Intraventricular Hemorrhage, and Perihematomal Edema: Public CT Dataset and Benchmark Model. Radiology Advances. 2026;umag036. https://doi.org/10.1093/radadv/umag036
+
+See [CITATION.cff](CITATION.cff) for machine-readable citation metadata.
