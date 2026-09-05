@@ -83,7 +83,7 @@ If you're running inference on CPU, you can speed things up by predicting with o
 docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu -f 0 --disable_tta
 ```
 
-PATH_TO_INPUT and PATH_TO_OUTPUT must be absolute paths. See this [issue](https://github.com/llgneuroresearch/IIPS-Docker/issues/2#issuecomment-5499476356) regarding CPU inference.
+PATH_TO_INPUT and PATH_TO_OUTPUT must be absolute paths. 
 
 ## Citation
 
