@@ -78,10 +78,9 @@ To run the inference on CPU, run the following command:
 docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu
 ```
 
-If you run the inference on CPU, we highly recommend to use `--disable_tta` option to speed up the inference time:
-
+If you're running inference on CPU, you can speed things up by predicting with only a single fold (0–4) using the -f option (e.g., -f 0) and/or by using the --disable_tta option. These options will theoretically produce slightly less accurate segmentation masks (though we have not thoroughly evaluated the impact on our end).
 ```
-docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu --disable_tta
+docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu -f 0 --disable_tta
 ```
 
 PATH_TO_INPUT and PATH_TO_OUTPUT must be absolute paths. See this [issue](https://github.com/llgneuroresearch/IIPS-Docker/issues/2#issuecomment-5499476356) regarding CPU inference.
