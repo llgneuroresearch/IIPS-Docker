@@ -78,7 +78,7 @@ To run the inference on CPU, run the following command:
 docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu
 ```
 
-If you're running inference on CPU, you can speed things up by predicting with only a single fold (0–4) using the -f option (e.g., -f 0) and/or by using the --disable_tta option. These options will theoretically produce slightly less accurate segmentation masks (though we have not thoroughly evaluated the impact on our end).
+If you're running inference on CPU, you can speed things up by predicting with only a single fold (0–4) using the -f option (e.g., `-f 0`) and/or by using the `--disable_tta` option. These options will theoretically produce slightly less accurate segmentation masks (though we have not thoroughly evaluated the impact on our end).
 ```
 docker run -ti -v PATH_TO_INPUT:/input -v PATH_TO_OUTPUT:/output -u 0:$(id -g) --rm --shm-size 2g avnirlab/iips:latest -device cpu -f 0 --disable_tta
 ```
