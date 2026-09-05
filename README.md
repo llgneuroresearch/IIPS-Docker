@@ -93,3 +93,11 @@ If you use this tool, please cite:
 > Wu AN, Portafaix A, Pilon D, et al. Multiclass Segmentation of Intracerebral Hemorrhage, Intraventricular Hemorrhage, and Perihematomal Edema: Public CT Dataset and Benchmark Model. Radiology Advances. 2026;umag036. https://doi.org/10.1093/radadv/umag036
 
 See [CITATION.cff](CITATION.cff) for machine-readable citation metadata.
+
+## Funding 
+
+The development of this tool was supported by the Foundation of the Radiological Society of North America - Seed Grant (RSD2122) and Radiology Research Grant (doi.org/10.69777/299979) from the Fonds de Recherche du Québec en Santé and Fondation de l'Association des Radiologistes du Québec, research funding from the Quebec Bio-Imaging Network (35450), internal funding from the "Support professoral du Departement de radiologie, radio-oncologie et medecine nucleaire" de l'Université de Montréal/Bayer and start-up grants from the Radiology Department Centre Hospitalier de l'Université de Montréal (CHUM) and CHUM Research Center (CRCHUM).
+
+Laurent Létourneau-Guillon is supported by a Clinical Research Scholarship–Junior 1 Salary Award (doi.org/10.69777/311203) from the Fonds de Recherche du Québec en Santé and Fondation de l'Association des Radiologistes du Québec.
+
+The development of the model was enabled in part by support provided by Calcul Québec (calculquebec.ca) and the Digital Research Alliance of Canada (alliancecan.ca).
