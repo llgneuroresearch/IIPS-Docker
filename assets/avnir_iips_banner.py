@@ -29,7 +29,8 @@ FUNDING_TEXT = (
     "Radiological Society of North America - Seed Grant (RSD2122) and "
     "Radiology Research Grant (doi.org/10.69777/299979) from the Fonds de "
     "Recherche du Québec en Santé and Fondation de l'Association des "
-    "Radiologistes du Québec, internal funding from the 'Support "
+    "Radiologistes du Québec, research funding from the Quebec"
+    "Bio-Imaging Network (35450)internal funding from the 'Support "
     "professoral du Departement de radiologie, radio-oncologie et "
     "medecine nucleaire' de l'Université de Montréal/Bayer and start-up "
     "grants from the Radiology Department Centre Hospitalier de "
@@ -37,8 +38,7 @@ FUNDING_TEXT = (
     "Laurent Létourneau-Guillon is supported by a Clinical Research "
     "Scholarship–Junior 1 Salary Award (doi.org/10.69777/311203) from "
     "the Fonds de Recherche du Québec en Santé and Fondation de "
-    "l'Association des Radiologistes du Québec, and a research funding "
-    "from the Quebec Bio-Imaging Network (35450)."
+    "l'Association des Radiologistes du Québec."
 )
 
 ACK_TEXT = (
