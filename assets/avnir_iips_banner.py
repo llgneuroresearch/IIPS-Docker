@@ -58,7 +58,7 @@ CITATION_LINES = [
     "",
     "Wu AN, Portafaix A, Pilon D, et al. Multiclass Segmentation of",
     "Intracerebral Hemorrhage, Intraventricular Hemorrhage, and",
-    "Perihematomal Edema: Public CT Dataset and Benchmark.",
+    "Perihematomal Edema: Public CT Dataset and Benchmark Model.",
     "Radiology Advances. 2026;umag036.",
     "https://doi.org/10.1093/radadv/umag036",
 ]
